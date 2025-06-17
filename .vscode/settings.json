@@ -1,0 +1,7 @@
+{
+    // it tells the editor that we are writing a Tailwind CSS file and 
+    // enables syntax highlighting and IntelliSense for Tailwind CSS classes.
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
+}
