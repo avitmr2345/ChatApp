@@ -13,7 +13,7 @@ import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
   const { theme } = useThemeStore();
 
   useEffect(() => {
@@ -22,6 +22,7 @@ const App = () => {
   }, [checkAuth, theme]);
 
   console.log({ authUser });
+  console.log("Online Users:", onlineUsers);
 
   if (isCheckingAuth && !authUser)
     return (
