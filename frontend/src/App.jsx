@@ -13,16 +13,13 @@ import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
   const { theme } = useThemeStore();
 
   useEffect(() => {
     checkAuth();
     document.documentElement.setAttribute("data-theme", theme);
   }, [checkAuth, theme]);
-
-  console.log({ authUser });
-  console.log("Online Users:", onlineUsers);
 
   if (isCheckingAuth && !authUser)
     return (
