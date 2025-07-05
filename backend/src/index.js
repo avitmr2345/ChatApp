@@ -17,7 +17,7 @@ app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:5173", "https://chatapp-7l3v.onrender.com"],
     credentials: true, // Allow credentials to be sent with requests like cookies or authorization headers
   })
 );
